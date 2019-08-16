@@ -11,7 +11,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  booking_time :integer
-#
+
 
 class Booking < ApplicationRecord
     belongs_to :customer

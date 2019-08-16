@@ -15,7 +15,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  retail_image :string
-#
+
 
 
 class Retail < ApplicationRecord
