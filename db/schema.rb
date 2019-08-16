@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_16_004639) do
+ActiveRecord::Schema.define(version: 2019_08_16_054853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_08_16_004639) do
     t.boolean "iscancel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "booking_time"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -53,6 +54,7 @@ ActiveRecord::Schema.define(version: 2019_08_16_004639) do
     t.string "instagram"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "retail_image"
   end
 
   create_table "services", force: :cascade do |t|
