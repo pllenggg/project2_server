@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Retails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Suburb</th>
+      <th>Postcode</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>Instagram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @retails.each do |retail| %>
+      <tr>
+        <td><%= retail.user_id %></td>
+        <td><%= retail.address1 %></td>
+        <td><%= retail.address2 %></td>
+        <td><%= retail.suburb %></td>
+        <td><%= retail.postcode %></td>
+        <td><%= retail.phone %></td>
+        <td><%= retail.email %></td>
+        <td><%= retail.website %></td>
+        <td><%= retail.facebook %></td>
+        <td><%= retail.instagram %></td>
+        <td><%= link_to 'Show', retail %></td>
+        <td><%= link_to 'Edit', edit_retail_path(retail) %></td>
+        <td><%= link_to 'Destroy', retail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Retail', new_retail_path %>

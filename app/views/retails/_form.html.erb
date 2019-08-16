@@ -1,0 +1,67 @@
+<%= form_with(model: retail, local: true) do |form| %>
+  <% if retail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(retail.errors.count, "error") %> prohibited this retail from being saved:</h2>
+
+      <ul>
+      <% retail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address1 %>
+    <%= form.text_field :address1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address2 %>
+    <%= form.text_field :address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suburb %>
+    <%= form.text_field :suburb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postcode %>
+    <%= form.text_field :postcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook %>
+    <%= form.text_field :facebook %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instagram %>
+    <%= form.text_field :instagram %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
