@@ -1,7 +1,7 @@
 class CreateRetails < ActiveRecord::Migration[5.2]
   def change
     create_table :retails, :id => false do |t|
-      t.integer :user_id
+      t.integer :user_id, primary_key: true, :auto_increment => false
       t.string :address1
       t.string :address2
       t.string :suburb

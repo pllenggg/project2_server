@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_17_012551) do
+ActiveRecord::Schema.define(version: 2019_08_17_020245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,8 +32,7 @@ ActiveRecord::Schema.define(version: 2019_08_17_012551) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "customers", id: false, force: :cascade do |t|
-    t.integer "user_id"
+  create_table "customers", primary_key: "user_id", id: :serial, force: :cascade do |t|
     t.string "full_name"
     t.string "profile_image"
     t.string "phone"
@@ -41,8 +40,7 @@ ActiveRecord::Schema.define(version: 2019_08_17_012551) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "retails", id: false, force: :cascade do |t|
-    t.integer "user_id"
+  create_table "retails", primary_key: "user_id", id: :serial, force: :cascade do |t|
     t.string "address1"
     t.string "address2"
     t.string "suburb"
@@ -55,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_08_17_012551) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "retail_image"
+    t.string "retail_name"
   end
 
   create_table "services", force: :cascade do |t|

@@ -15,6 +15,8 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  retail_image :string
+#  retail_name  :string
+#
 
 
 
