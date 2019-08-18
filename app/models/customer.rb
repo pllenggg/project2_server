@@ -2,7 +2,7 @@
 #
 # Table name: customers
 #
-#  user_id       :integer
+#  user_id       :integer          not null, primary key
 #  full_name     :string
 #  profile_image :string
 #  phone         :string
