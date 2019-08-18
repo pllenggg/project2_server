@@ -2,7 +2,7 @@
 #
 # Table name: retails
 #
-#  user_id      :integer
+#  user_id      :integer          not null, primary key
 #  address1     :string
 #  address2     :string
 #  suburb       :string
