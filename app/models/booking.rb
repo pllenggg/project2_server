@@ -16,5 +16,5 @@
 class Booking < ApplicationRecord
     belongs_to :customer, primary_key: "user_id", foreign_key: "user_id"
     belongs_to :retail, primary_key: "user_id", foreign_key: "retail_id"
-    has_many :services, :through => :retail
+    belongs_to :service
 end
