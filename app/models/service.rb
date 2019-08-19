@@ -19,4 +19,5 @@
 class Service < ApplicationRecord
    belongs_to :retail
    belongs_to :category
+   has_many :bookings
 end
